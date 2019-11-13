@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Solitaire</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body>
+    <div id="background">
+        <div id="top-band">
+            <div class="top_card_slot">
+                <img src="images/red_back.png" class="card" onclick="AdvanceDeck()">
+            </div>
+            <div class="top_card_slot" id="waste">
+                <img src="images/yellow_back.png" class="card" onclick="CheckCard(this.src,this.parentElement.id)" ondragstart="drag(event,this.src,this.id)">
+            </div>
+            <div class="top_card_slot">
+            </div>
+            <div class="top_card_slot" id="hearts">
+                <img src="images/red_back.png" class="card" ondrop="drop(event,this.parentElement.id)" ondragover="allowDrop(event)">
+            </div>
+            <div class="top_card_slot" id="diamonds">
+                <img src="images/red_back.png" class="card" ondrop="drop(event,this.parentElement.id)" ondragover="allowDrop(event)">
+            </div>
+            <div class="top_card_slot" id="clubs">
+                <img src="images/red_back.png" class="card" ondrop="drop(event,this.parentElement.id)" ondragover="allowDrop(event)">
+            </div>
+            <div class="top_card_slot" id="spades">
+                <img src="images/red_back.png" class="card" ondrop="drop(event,this.parentElement.id)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+        <div id="tableau">
+            <div class="pile" id="p1">
+            </div>
+            <div class="pile" id="p2">
+            </div>
+            <div class="pile" id="p3">
+            </div>
+            <div class="pile" id="p4">
+            </div>
+            <div class="pile" id="p5">
+            </div>
+            <div class="pile" id="p6">
+            </div>
+            <div class="pile" id="p7">
+            </div>
+        </div>
+        <div id="text" style="display: block; margin-top: 200px; margin-left: 10px">
+        </div>
+        <div id="winbanner">
+            <h2>YOU WON!</h2>
+            <div id="playAgain" onclick="ResetGame()">PLAY AGAIN?</div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</HTML>
